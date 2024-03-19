@@ -1,9 +1,46 @@
 /* Main Font Import */
 @import url('https://fonts.googleapis.com/css2?family=Preahvihear&display=swap');
 
+:root {
+    --content-bg-color: rgba(26, 26, 26, 0.8);
+    --content-box-shadow: rgb(84, 83, 83) 5px 5px 10px;
+}
+
 * {
     font-family: "Preahvihear", sans-serif;
     font-weight: 400;
     font-style: normal;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
 }
 
+.content {
+    text-align: center;
+    background:var(--content-bg-color);
+    padding:15px;
+    box-shadow:var(--content-box-shadow);
+    margin-top:0.25%;
+    height:calc(100vh - 5%);
+}
+
+.title-content-container {
+    background:var(--content-bg-color);
+    opacity:1;
+    border:1px solid #000;
+    border-radius:5px;
+    filter:contrast(1.15);
+}
+
+.title-content {
+    padding:10px;
+}
+
+.title {
+    cursor:pointer;
+    text-align: center;
+    padding:15px;
+    user-select:none;
+    color:rgba(255, 255, 255, 0.5);
+}

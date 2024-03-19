@@ -25,6 +25,18 @@
     height:calc(100vh - 5%);
 }
 
+.theme-changer-container {
+    background:unset;
+    opacity:1;
+}
+
+.theme-changer {
+    padding:10px;
+    color:yellow;
+    font-size:25px;
+    cursor:pointer;
+}
+
 .title-content-container {
     background:var(--content-bg-color);
     opacity:1;

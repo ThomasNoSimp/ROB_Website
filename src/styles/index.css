@@ -13,7 +13,18 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+}
 
+body {
+    transition: background-color 0.5s ease-in;
+}
+
+.bg-dark {
+    background-color:#333;
+}
+
+.bg-light {
+    background-color:#fff;
 }
 
 .content {
@@ -26,8 +37,11 @@
 }
 
 .theme-changer-container {
-    background:unset;
-    opacity:1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    z-index: 1000;
 }
 
 .theme-changer {
@@ -38,6 +52,7 @@
 }
 
 .title-content-container {
+    position:relative;
     background:var(--content-bg-color);
     opacity:1;
     border:1px solid #000;

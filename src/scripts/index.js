@@ -25,3 +25,27 @@ for (let profile of profiles) {
 }
 
 // Jobs
+const jobs = document.getElementsByClassName('jobs-content-container');
+for (let job of jobs) {
+    job.addEventListener('click', () => {
+        window.location.href = 'jobs.html';
+        // TODO: Add Logics
+    });
+}
+
+// Shop
+const shops = document.getElementsByClassName('shop-content-container');
+for (let shop of shops) {
+    shop.addEventListener('click', () => {
+        window.location.href = 'shop.html';
+        // TODO: Add Logics
+    });
+}
+
+// Help
+const helps = document.getElementsByClassName('help-content-container');
+for (let help of helps) {
+    help.addEventListener('click', () => {
+        window.location.href = 'help.html';
+    });
+}

@@ -4,6 +4,7 @@
 :root {
     --content-bg-color: rgba(26, 26, 26, 0.8);
     --content-box-shadow: rgb(84, 83, 83) 5px 5px 10px;
+    --button-primary-color: rgba(255, 255, 255, 0.5);
 }
 
 * {
@@ -32,7 +33,7 @@ body {
     background:var(--content-bg-color);
     padding:15px;
     box-shadow:var(--content-box-shadow);
-    margin-top:0.25%;
+    margin-top:1%;
     height:calc(100vh - 5%);
 }
 
@@ -70,4 +71,221 @@ body {
     padding:15px;
     user-select:none;
     color:rgba(255, 255, 255, 0.5);
+}
+
+.join-server-container {
+    padding:15px;
+    margin-top:2%;
+}
+
+.join-server-content {
+    padding:15px;
+    background: var(--content-bg-color);
+    border-radius:5px;
+}
+
+.join-server {
+    padding:15px;
+    border-radius:5px;
+}
+
+.join-server-button {
+    padding:15px;
+    border:1px solid black;
+    border-radius:5px;
+    background:var(--button-primary-color);
+}
+
+.join-server-button:hover {
+    box-shadow:var(--content-box-shadow);
+    transform:scale(1.05);
+    transition:box-shadow 0.25s ease-in, transform 0.25s ease-in;
+}
+
+.menu-buttons {
+    display: flex; /* Make the container a flex container */
+    justify-content: center; /* Align items horizontally */
+    align-items: center; /* Align items vertically */
+    margin-right:5%;
+}
+
+
+.profile-content-container {
+    text-align: initial;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 15%;
+    cursor: pointer;
+    background: var(--button-primary-color);
+    border-radius: 5px;
+    user-select: none;
+    margin-top:5%;
+    margin-left:5%;
+}
+
+.profile-content {
+    padding: 15px;
+    text-align: center; /* Center align the contents */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile {
+    padding: 1px;
+}
+
+.profile-icon {
+    display: block; /* Make the icon block-level element */
+    margin: 0 auto; /* Center the icon horizontally */
+    text-align: center;
+    font-size:30px;
+}
+
+.profile-title {
+    padding: 10px;
+    color: #ccc;
+    font-size: 15px;
+    text-align: center;
+}
+
+.profile-content-container:hover {
+    box-shadow:var(--content-box-shadow);
+    transform:scale(1.05);
+    transition:box-shadow 0.25s ease-in, transform 0.25s ease-in;
+}
+
+.jobs-content-container {
+    text-align: initial;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 15%;
+    cursor: pointer;
+    background: var(--button-primary-color);
+    border-radius: 5px;
+    user-select: none;
+    margin-top:5%;
+    margin-left:5%;
+}
+
+.jobs-content {
+    padding: 15px;
+    text-align: center; /* Center align the contents */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.jobs {
+    padding: 1px;
+}
+
+.jobs-icon {
+    display: block; /* Make the icon block-level element */
+    margin: 0 auto; /* Center the icon horizontally */
+    text-align: center;
+    font-size:30px;
+}
+
+.jobs-title {
+    padding: 10px;
+    color: #ccc;
+    font-size: 15px;
+    text-align: center;
+}
+
+.jobs-content-container:hover {
+    box-shadow:var(--content-box-shadow);
+    transform:scale(1.05);
+    transition:box-shadow 0.25s ease-in, transform 0.25s ease-in;
+}
+
+.shop-content-container {
+    text-align: initial;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 15%;
+    cursor: pointer;
+    background: var(--button-primary-color);
+    border-radius: 5px;
+    user-select: none;
+    margin-top:5%;
+    margin-left:5%;
+}
+
+.shop-content {
+    padding: 15px;
+    text-align: center; /* Center align the contents */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shop {
+    padding: 1px;
+}
+
+.shop-icon {
+    display: block; /* Make the icon block-level element */
+    margin: 0 auto; /* Center the icon horizontally */
+    text-align: center;
+    font-size:30px;
+}
+
+.shop-title {
+    padding: 10px;
+    color: #ccc;
+    font-size: 15px;
+    text-align: center;
+}
+
+.shop-content-container:hover {
+    box-shadow:var(--content-box-shadow);
+    transform:scale(1.05);
+    transition:box-shadow 0.25s ease-in, transform 0.25s ease-in;
+}
+
+.help-content-container {
+    text-align: initial;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 15%;
+    cursor: pointer;
+    background: var(--button-primary-color);
+    border-radius: 5px;
+    user-select: none;
+    margin-top:5%;
+    margin-left:5%;
+}
+
+.help-content {
+    padding: 15px;
+    text-align: center; /* Center align the contents */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.help {
+    padding: 1px;
+}
+
+.help-icon {
+    display: block; /* Make the icon block-level element */
+    margin: 0 auto; /* Center the icon horizontally */
+    text-align: center;
+    font-size:30px;
+}
+
+.help-title {
+    padding: 10px;
+    color: #ccc;
+    font-size: 15px;
+    text-align: center;
+}
+
+.help-content-container:hover {
+    box-shadow:var(--content-box-shadow);
+    transform:scale(1.05);
+    transition:box-shadow 0.25s ease-in, transform 0.25s ease-in;
 }

@@ -51,8 +51,11 @@
             const urlParams = new URLSearchParams(window.location.search);
             const username = urlParams.get('username');
 
-            // Store the username in local storage
-            localStorage.setItem('username', username);
+            // Check if username is present in the URL
+            if (username) {
+                // Store the username in local storage
+                localStorage.setItem('username', username);
+            }
         }
 
         // Call handleAuthorization function when the page loads

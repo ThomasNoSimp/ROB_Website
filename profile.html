@@ -1,11 +1,68 @@
+<!-- profile.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Republic Of Burma | Profile</title>
+    <title>Profile</title>
 </head>
 <body>
-    
+    <h1>Welcome to your profile</h1>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Function to handle authorization callback
+            function handleAuthorization() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const code = urlParams.get('code');
+
+                // Check if code is present in the URL
+                if (code) {
+                    // Exchange the authorization code for an access token
+                    fetch('https://discord.com/api/oauth2/token', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded'
+                        },
+                        body: new URLSearchParams({
+                            client_id: '1217300100917755965',
+                            client_secret: 'MTIxNzMwMDEwMDkxNzc1NTk2NQ.GAMs2O.s7Gu36UTOrZtAI89-HiOFLGPN7e1005EdhGG1I',
+                            code: code,
+                            grant_type: 'authorization_code',
+                            redirect_uri: 'https://republic-of-burma.netlify.app/profile.html'
+                        })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        // Once you have the access token, you can use it to fetch user information
+                        const accessToken = data.access_token;
+
+                        // Example: Fetch user information using the access token
+                        fetch('https://discord.com/api/users/@me', {
+                            headers: {
+                                Authorization: `Bearer ${accessToken}`
+                            }
+                        })
+                        .then(response => response.json())
+                        .then(userData => {
+                            // Extract the username from the user data
+                            const username = userData.username;
+
+                            // Store the username in local storage
+                            localStorage.setItem('username', username);
+                            
+                            // Optional: Redirect to a different page or perform other actions
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+                }
+            }
+
+            // Call handleAuthorization function when the page loads
+            handleAuthorization();
+        });
+    </script>
 </body>
 </html>

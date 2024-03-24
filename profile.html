@@ -1,68 +1,51 @@
-<!-- profile.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>Republic Of Burma | Profile</title>
+    <link rel="stylesheet" href="src/styles/profile/index.css">
+    <link rel="icon" type="x-image" href="src/images/favicon.webp">
 </head>
 <body>
-    <h1>Welcome to your profile</h1>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Function to handle authorization callback
-            function handleAuthorization() {
-                const urlParams = new URLSearchParams(window.location.search);
-                const code = urlParams.get('code');
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="content">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="profile-information-content-container">
+                                <div class="profile-information-content">
+                                    <div class="profile-information">
+                                        <form class="form">
+                                            <div class="form-group">
+                                                <label class="form-label" for="username">Username</label>
+                                                <input type="text" class="form-control" id="username" disabled>
+                                            </div>
+                                            <br><br>
+                                            <div class="form-group">
+                                                <label class="form-label" for="password">Password</label>
+                                                <input type="password" class="form-control" id="password" disabled>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                // Check if code is present in the URL
-                if (code) {
-                    // Exchange the authorization code for an access token
-                    fetch('https://discord.com/api/oauth2/token', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/x-www-form-urlencoded'
-                        },
-                        body: new URLSearchParams({
-                            client_id: '1217300100917755965',
-                            client_secret: 'MTIxNzMwMDEwMDkxNzc1NTk2NQ.GAMs2O.s7Gu36UTOrZtAI89-HiOFLGPN7e1005EdhGG1I',
-                            code: code,
-                            grant_type: 'authorization_code',
-                            redirect_uri: 'https://republic-of-burma.netlify.app/profile.html'
-                        })
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        // Once you have the access token, you can use it to fetch user information
-                        const accessToken = data.access_token;
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-                        // Example: Fetch user information using the access token
-                        fetch('https://discord.com/api/users/@me', {
-                            headers: {
-                                Authorization: `Bearer ${accessToken}`
-                            }
-                        })
-                        .then(response => response.json())
-                        .then(userData => {
-                            // Extract the username from the user data
-                            const username = userData.username;
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-                            // Store the username in local storage
-                            localStorage.setItem('username', username);
-                            
-                            // Optional: Redirect to a different page or perform other actions
-                        });
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                    });
-                }
-            }
-
-            // Call handleAuthorization function when the page loads
-            handleAuthorization();
-        });
-    </script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>

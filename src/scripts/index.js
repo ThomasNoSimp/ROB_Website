@@ -17,10 +17,15 @@ for (let joinServerButton of joinServerButtons) {
 // Menu Buttons
 // Profile
 const profiles = document.getElementsByClassName('profile-content-container');
+let loggedIn = false;
 for (let profile of profiles) {
     profile.addEventListener('click', () => {
-        window.location.href = 'profile.html';
-        // TODO: Add Logics
+        if (loggedIn === false) {
+            window.location.href = 'login.html';
+        }
+        else {
+            window.location.href = 'profile.html';
+        }
     });
 }
 

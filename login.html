@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Republic Of Burma | Log in</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #36393f; /* Discord-like background color */
+            color: #ffffff; /* Discord-like text color */
+            font-family: Arial, sans-serif; /* Discord-like font */
+        }
+        .container-fluid {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn-primary {
+            background-color: #7289da; /* Discord-like button color */
+            border-color: #7289da; /* Discord-like button border color */
+            width:100%;
+        }
+        .btn-primary:hover {
+            background-color: #677bc4; /* Discord-like button color on hover */
+            border-color: #677bc4; /* Discord-like button border color on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <button class="btn btn-primary btn-lg btn-block login-button">Log in with Discord</button>
+                <script defer>
+                    const loginButtons = document.querySelector('.login-button');
+                    loginButtons.addEventListener('click', () => {
+                        window.location.href = 'https://discord.com/oauth2/authorize?client_id=1217300100917755965&response_type=code&redirect_uri=https%3A%2F%2Frepublic-of-burma.netlify.app%2Fprofile.html&scope=identify';
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

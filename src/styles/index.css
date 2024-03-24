@@ -121,6 +121,7 @@ body {
     user-select: none;
     margin-top:5%;
     margin-left:5%;
+    cursor:pointer;
 }
 
 .profile-content {
@@ -166,6 +167,7 @@ body {
     user-select: none;
     margin-top:5%;
     margin-left:5%;
+    cursor:pointer;
 }
 
 .jobs-content {
@@ -211,6 +213,7 @@ body {
     user-select: none;
     margin-top:5%;
     margin-left:5%;
+    cursor:pointer;
 }
 
 .shop-content {
@@ -256,6 +259,7 @@ body {
     user-select: none;
     margin-top:5%;
     margin-left:5%;
+    cursor:pointer;
 }
 
 .help-content {

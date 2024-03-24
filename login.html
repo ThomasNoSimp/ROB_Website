@@ -45,6 +45,18 @@
                 window.location.href = 'https://discord.com/oauth2/authorize?client_id=1217300100917755965&response_type=code&redirect_uri=https%3A%2F%2Frepublic-of-burma.netlify.app%2Fprofile.html&scope=identify';
             });
         });
+
+        // Function to handle authorization callback
+        function handleAuthorization() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const username = urlParams.get('username');
+
+            // Store the username in local storage
+            localStorage.setItem('username', username);
+        }
+
+        // Call handleAuthorization function when the page loads
+        handleAuthorization();
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

@@ -1,3 +1,18 @@
+<?php 
+    session_start();
+
+    // Check if user is logged in
+    if (!isset($_SESSION['user'])) {
+        // Redirect to login page if user is not logged in
+        // header("Location: login.html");
+        // exit;
+        // TODO: Uncomment after testing
+    }
+    
+    // Retrieve user information from session
+    $user = $_SESSION['user'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,15 +32,15 @@
                             <div class="profile-information-content-container">
                                 <div class="profile-information-content">
                                     <div class="profile-information">
+                                        <h3 class="profile-information-title">Profile Information</h3>
                                         <form class="form">
                                             <div class="form-group">
-                                                <label class="form-label" for="username">Username</label>
-                                                <input type="text" class="form-control" id="username" disabled>
-                                            </div>
-                                            <br><br>
-                                            <div class="form-group">
-                                                <label class="form-label" for="password">Password</label>
-                                                <input type="password" class="form-control" id="password" disabled>
+                                                <label for="username" class="form-label">Username: Legit_Thomas</label>
+                                                <br>
+                                                <label for="email" class="form-label">Email: hitthomas28@gmail.com</label>
+                                                <br>
+                                                <label for="password" class="form-label">Password: ***********</label>
+                                                <br>
                                             </div>
                                         </form>
                                     </div>

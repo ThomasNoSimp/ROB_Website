@@ -5,10 +5,50 @@ body {
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
-body .form-label {
-  color: #fff;
-  text-decoration: none;
-  opacity: 0.7;
+
+.profile-information-content-container {
+  background-color: #3a3a3a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/*# sourceMappingURL=index.css.map */
+.profile-information-content {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)),
+              linear-gradient(to bottom right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2)),
+              rgba(100, 100, 100, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  margin-top: 2.5%;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  height:250px;
+  width:calc(100vh * 2);
+}
+
+.profile-information-content > * {
+  user-select:none;
+  webkit-user-drag:none;
+  webkit-user-select:none;
+  webkit-user-modify:none;
+  webkit-align-content:center;
+}
+
+.profile-information-content-container .profile-information-title {
+  align-content: center;
+  text-align: center;
+  padding: 15px;
+  color: white;
+  opacity: 0.9;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.profile-information-content-container .form-group {
+  text-align: center;
+}
+
+.profile-information-content-container .form-label {
+  color: white;
+  opacity: 0.8;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
